@@ -10,6 +10,6 @@ export class AddInstructorUseCase {
     const qualifications = request.qualifications.map(q => new Qualification(q));
     const instructor = new Instructor(request.id, request.name, qualifications);
 
-    this.instructorRepository.add(instructor);
+    this.instructorRepository.create(instructor);
   }
 }

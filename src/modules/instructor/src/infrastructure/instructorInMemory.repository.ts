@@ -4,7 +4,7 @@ import type { InstructorRepository } from '../domain/ports/instructor.repository
 export class InstructorInMemoryRepository implements InstructorRepository {
   private instructors: Instructor[] = [];
 
-  add(instructor: Instructor): void {
+  create(instructor: Instructor): void {
     this.instructors.push(instructor);
   }
 

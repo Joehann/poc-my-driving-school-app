@@ -13,7 +13,6 @@ describe('UpdateStudentProgressUseCase', () => {
     studentRepository = new StudentInMemoryRepository();
     updateStudentProgressUseCase = new UpdateStudentProgressUseCase(studentRepository);
 
-    // Ajouter un étudiant pour les tests
     const student = new Student('1', 'John Doe', 'licenseA', '123456789', 'REC123', '123 Main St', new Progress());
     studentRepository.create(student);
   });
