@@ -1,5 +1,5 @@
 import { Qualification } from "../valueObject/qualification.valueObject";
-import type { QualificationType } from "../type/qualification.type";
+import { QualificationType } from "../type/qualification.type";
 
 export class Instructor {
     constructor(
@@ -8,7 +8,8 @@ export class Instructor {
       public qualifications: Qualification[],
       public maxDailyHours: number = 8,
       public maxStudents: number = 20,
-      public schedule: Record<string, string[]> = {}
+      public schedule: Record<string, string[]> = {},
+      public weeklyRestDays: string[] = []
     ) {}
   
     // Check if the instructor is qualified to teach a specific license
@@ -18,6 +19,11 @@ export class Instructor {
   
     // Check if the instructor has availability for a given time slot
     hasAvailability(date: string, slot: string): boolean {
+      const dayOfWeek = new Date(date).toLocaleDateString('en-US', { weekday: 'long' });
+      if (this.weeklyRestDays.includes(dayOfWeek)) {
+        return false; // Day off
+      }
+      
       if (this.schedule[date]) {
         return !this.schedule[date].includes(slot);
       }
@@ -40,5 +46,13 @@ export class Instructor {
   
     canWorkOnDay(date: string): boolean {
       return this.totalHoursOnDay(date) < this.maxDailyHours;
+    }
+
+    isAvailableForNext3Days(date: string): boolean {
+      const today = new Date();
+      const targetDate = new Date(date);
+      const diffInDays = Math.ceil((targetDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+      
+      return diffInDays >= 3;
     }
   }
