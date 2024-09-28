@@ -8,6 +8,10 @@ export class InstructorInMemoryRepository implements InstructorRepository {
     this.instructors.push(instructor);
   }
 
+  findAll(): Instructor[] {
+    return this.instructors;
+  }
+
   findById(id: string): Instructor | null {
     return this.instructors.find(instructor => instructor.id === id) || null;
   }
