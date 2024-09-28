@@ -1,5 +1,5 @@
 import { Instructor } from '../domain/entity/instructor.entity';
-import type { InstructorRepository } from '../domain/ports/instructor.repository';
+import type { InstructorRepository } from '../domain/port/instructor.repository';
 
 export class InstructorInMemoryRepository implements InstructorRepository {
   private instructors: Instructor[] = [];

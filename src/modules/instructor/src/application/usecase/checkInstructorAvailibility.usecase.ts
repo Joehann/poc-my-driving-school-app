@@ -1,5 +1,5 @@
 
-import { InstructorRepository } from '../../domain/ports/instructor.repository';
+import { InstructorRepository } from '../../domain/port/instructor.repository';
 
 export type CheckAvailabilityRequest = {
   instructorId: string;

@@ -1,6 +1,6 @@
 import { Student } from "../../domain/entity/student.entity";
-import { StudentRepository } from "../../domain/ports/student.repository";
-import type { AddStudentRequest } from "../types/student";
+import { StudentRepository } from "../../domain/port/student.repository";
+import type { AddStudentRequest } from "../type/student";
 
 
 export class AddStudentUseCase {

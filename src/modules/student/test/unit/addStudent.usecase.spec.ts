@@ -1,4 +1,4 @@
-import { AddStudentRequest } from "../../src/application/types/student";
+import { AddStudentRequest } from "../../src/application/type/student";
 import { AddStudentUseCase } from "../../src/application/usecase/addStudent.usecase";
 import { StudentInMemoryRepository } from "../../src/infrastructure/studentInMemory.repository";
 

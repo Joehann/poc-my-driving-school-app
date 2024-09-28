@@ -1,5 +1,5 @@
-import { StudentRepository } from '../../domain/ports/student.repository';
-import type{ UpdateStudentProgressRequest } from '../types/student';
+import { StudentRepository } from '../../domain/port/student.repository';
+import type{ UpdateStudentProgressRequest } from '../type/student';
 
 
 export class UpdateStudentProgressUseCase {

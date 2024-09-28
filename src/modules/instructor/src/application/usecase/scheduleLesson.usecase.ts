@@ -1,4 +1,4 @@
-import type { InstructorRepository } from '../../domain/ports/instructor.repository';
+import type { InstructorRepository } from '../../domain/port/instructor.repository';
 import type { ScheduleLessonRequest } from '../type/request.type';
 
 export class ScheduleLessonUseCase {

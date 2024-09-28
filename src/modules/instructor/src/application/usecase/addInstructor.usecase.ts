@@ -1,6 +1,6 @@
 import { Instructor } from '../../domain/entity/instructor.entity';
 import { Qualification } from '../../domain/valueObject/qualification.valueObject';
-import type { InstructorRepository } from '../../domain/ports/instructor.repository';
+import type { InstructorRepository } from '../../domain/port/instructor.repository';
 import type { AddInstructorRequest } from '../type/request.type';
 
 export class AddInstructorUseCase {

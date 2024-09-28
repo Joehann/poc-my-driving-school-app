@@ -1,14 +1,8 @@
-import { InstructorRepository } from 'driving-school/modules/instructor/src/domain/ports/instructor.repository';
-import { StudentRepository } from 'driving-school/modules/student/src/domain/ports/student.repository';
+import { InstructorRepository } from 'driving-school/modules/instructor/src/domain/port/instructor.repository';
+import { StudentRepository } from 'driving-school/modules/student/src/domain/port/student.repository';
 import { Lesson } from '../../domain/entity/lesson.entity';
 import { LessonRepository } from '../../domain/port/lesson.entity';
-
-interface ScheduleLessonRequest {
-  studentId: string;
-  instructorId: string;
-  date: string;
-  timeSlot: string;
-}
+import { ScheduleLessonRequest } from '../type/lesson.type';
 
 export class ScheduleLessonUseCase {
   constructor(

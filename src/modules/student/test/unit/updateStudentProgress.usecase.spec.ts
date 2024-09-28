@@ -1,4 +1,4 @@
-import { UpdateStudentProgressRequest } from "../../src/application/types/student";
+import { UpdateStudentProgressRequest } from "../../src/application/type/student";
 import { UpdateStudentProgressUseCase } from "../../src/application/usecase/updateStudentProgress.usecase";
 import { Progress } from "../../src/domain/entity/progress.entity";
 import { Student } from "../../src/domain/entity/student.entity";

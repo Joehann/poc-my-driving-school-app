@@ -1,4 +1,4 @@
-import { StudentRepository } from '../domain/ports/student.repository';
+import { StudentRepository } from '../domain/port/student.repository';
 import { Student } from '../domain/entity/student.entity';
 
 export class StudentInMemoryRepository implements StudentRepository {
