@@ -1,11 +1,9 @@
 module.exports = {
-  testEnvironment: 'jsdom',
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  moduleNameMapper: {
-    '^driving-school/(.*)$': '<rootDir>/src/$1',
-  },
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  moduleFileExtensions: ['ts', 'tsx', 'js'],
+  testMatch: ['**/?(*.)+(spec|test).[tj]s?(x)'],
   transform: {
-    '^.+\\.(ts|tsx)$': 'babel-jest',
+    '^.+\\.ts?$': 'ts-jest',
   },
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
 };
